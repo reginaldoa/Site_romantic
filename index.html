@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa Romântica</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5e1e1;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            width: 300px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff7b7b;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff4c4c;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Digite apenas o seu primeiro nome:</h2>
+        <input type="text" id="nome" placeholder="Digite aqui...">
+        <button onclick="verificarNome()">Enviar</button>
+        <p class="message" id="mensagem"></p>
+    </div>
+
+    <script>
+        function verificarNome() {
+            const nome = document.getElementById("nome").value.trim().toUpperCase();
+            const mensagem = document.getElementById("mensagem");
+
+            if (nome === "STEPHANIE") {
+                mensagem.innerHTML = "Stephanie, você é a mulher mais linda desse mundo, minha companheira de alma, você é incrível, e um dia, iremos cuidar um do outro. Amo você ❤️";
+            } else {
+                mensagem.innerHTML = `Ué, esse nome ${nome}, definitivamente não é Stephanie, tente novamente...`;
+            }
+        }
+    </script>
+</body>
+</html>
